@@ -4,45 +4,80 @@
     <title> страница о Александре </title>
     <meta charset ="utf-8" />
 </head>
-<body> 
-     <br />
-     <h1> Резюме </h1> 
-     <h3> Обо мне. </h3> 
-     <img src="https://sun9-42.userapi.com/c852028/v852028155/1c8a07/s4kv5paDThE.jpg" width=25%" title="Мое фото"/> <br /><br />
-     <p> Привет меня зовут <b>Александра</b> и мне 31 годик. </p> 
-     <h4> О работе.
-     <p>Имел опыт работы : </p>      
-     <ul>
-     <li>Наладчиком КИП и А</li>
-     <li>Инженером АСУТП</li>
-     <li>Инженером электронщиком</li>
-     <li>И вы не поверите, <a href="https://vk.com/djdabro?z=photo24985268_279507106%2Falbum24985268_129600842%2Frev" target="_blank" title="Ссылка на вк"> Диджеем </a></li>
-       <br /><br />
-      <div> 
-        <table border="1" cellpadding="7" cellspacing="0">
-     <tr>
-     <td colspan="3" bgcolor="green" align="center"> МУЗЫКАЛЬНЫЕ СТИЛИ С КОТОРЫМИ Я РАБОТАЛ </td>
-     </tr>  
-     <tr>
-     <td width="26%" valign="top" align="center">House</td>
-     <td width="25%" valign="top" align="center">Drum and bass</td>
-     <td width="25%" valign="top" align="center">Breaks</td>
-     </tr>
-     </table>
-     <br /><br />
-       </div>
-     <form name="action" action"" method"post">
-        <label for="">А чем занимались вы?</label> <input type"text" title="Хобби" id="name" />
+<body id="thanks_Veronica"> 
+    <br  />
+    <h1> Резюме </h1> 
+    <h3> Обо мне. </h3> 
+    <img src="https://sun9-42.userapi.com/c852028/v852028155/1c8a07/s4kv5paDThE.jpg" width="25%" title="Мое фото"/> 
+    <br />
+    <br />
+    <p> Привет меня зовут 
+     	<b>Александра</b> 
+     	и мне 31 годик. </p> 
+    <h4> О работе.<h4>
+    <p>Имел опыт работы: </p>      
+    <ul>
+     	<li>Наладчиком КИП и А</li>
+     	<li>Инженером АСУТП</li>
+     	<li>Инженером электронщиком</li>
+     	<li>И вы не поверите, 
+     		<a href="https://vk.com/djdabro?z=photo24985268_279507106%2Falbum24985268_129600842%2Frev" target="_blank" title="Ссылка на вк"> Диджеем </a>
+     	</li>
+    </ul>
+       	<br />	
+       	<br />
+    <div> 
+        <table border="1" 
+        	   cellpadding="7" 
+        	   cellspacing="0">
+	     		<tr>
+	     			<td colspan="3" 
+	     				bgcolor="green" 
+	     				align="center"> МУЗЫКАЛЬНЫЕ СТИЛИ С КОТОРЫМИ Я РАБОТАЛ 
+	     			</td>
+	     		</tr>  
+	     		<tr>
+	     			<td width="26%" 
+	     				valign="top"
+	     				align="center">House
+	     			</td>
+	     			<td width="25%" 
+	     				valign="top" 
+	     				align="center">Drum and bass
+	     			</td>
+	     			<td width="25%" 
+	     				valign="top" 
+	     				align="center">Breaks
+	     			</td>
+	    		</tr>
+     	</table>
+     	<br />
+     	<br />
+    </div>
+    <form name="action" action="">
+        <label for="name">А чем занимались вы?</label> 
+        <input type="text" title="Хобби" id="name">
      </form>
-     <button>отправить </button>
-     <br /><br />
-     
-  
-     <div> 
-     <p>Привяу</p>
-     </div>
-     
-   
-
+     <button>отправить</button>
+     <br />
+     <br />
 </body>
+<script type="text/javascript">
+		console.log	("Александр");
+		alert ("Александр");
+		const bgc = document.getElementById('thanks_Veronica');
+		bgc.style.backgroundColor = '#ff8000';
+	    const GoodDay = confirm("Классный денёк?");
+            if(GoodDay){
+        			const Day = prompt ("C чего сегодня начался твой день?");
+                    console.log("Твой день начался " + Day);
+        			 /*Для эксперемента*/
+        			/*alert ("Твой день начался " + Day);*/
+        	}	
+        	else{
+        				console.log("Спасибо, Вероника за задание");
+                     /*Для эксперемента*/
+        				/*alert ("Спасибо, Вероника за задание");*/
+        	}
+</script>
 </html>
