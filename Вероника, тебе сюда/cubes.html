@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cubes</title>
+  <meta name="description" content="cubes">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style>
+    #container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      max-height: 100%;
+    }
+    div.box {
+      width:200px;
+      height:200px;}
+    }
+  </style>
+</head>
+</head>
+<body>
+  <button>Добавить фигуру</button>
+  <div id="container"></div>
+  <script>
+    function onClick() {
+      const div = document.createElement("div");
+      div.classList.add("box");
+      div.style = "background-color: " + '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase()  ;
+      document.getElementById("container").appendChild(div);
+    }
+    document.querySelector("button").addEventListener("click", onClick);
+  </script>
+</body>
+</html>

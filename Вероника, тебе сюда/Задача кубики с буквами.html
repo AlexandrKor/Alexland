@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Алфавит</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+</head>
+<style>
+  html {
+    font: 1em Roboto, sans-serif;
+  }
+  input, button {
+    font: inherit;
+  }
+  #fix {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+  .mix {
+    border: none;
+    color: white;
+    background-color: #1C3CE3;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+  <div id="fix"></div>
+  <input type="text" id="myInput" placeholder="Введите текст" class="Inp">
+  
+</body>
+<script>
+  /*Создаем переменную fix, которая обращается к блоку div c классом fix*/
+  const fix = document.getElementById("fix");
+  /*Создаем переменную myInput, которая обращается к блоку input c классом myInput*/
+  const myInput = document.getElementById("myInput");
+  /*Слушаем события происходящие при вводе в input*/
+  myInput.addEventListener("input", function(event) {
+    /*создаем массив*/
+    const target = event.target;
+    /**/
+    fix.textContent = "";
+    console.log(event)
+
+    /*Цикл следит за изменениями в массиве переменной target и при каждом изменении создает актуальные кубики*/
+    for(const character of target.value) {
+      /*Создаем кнопку*/
+      const button = document.createElement("button");
+      /*Присваевается класс кнопке*/
+      button.className = "mix";
+      /*вписывается в кнопку значения переменной character*/
+      button.innerHTML = character;
+      /*В родительском элементе с айди фикс создается кнопка*/
+      fix.appendChild(button); 
+      console.log(character, target.value);
+    }
+  });
+  fix.addEventListener("click", function(event) {
+    const target = event.target.closest(".mix");
+    if(!target) return;
+    target.remove();
+    myInput.value = fix.textContent;
+  });
+
+</script>
+</html>

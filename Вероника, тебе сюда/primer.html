@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>САШКО: сервис для заказа иллюстраций</title>
+	<meta name="description" content="Сайт о правильном образе жизни">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="Йога, ЗОЖ, Планирование, Питание, счастье, переработка мусора">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+</head>
+<style>
+	#fix {
+		display: flex; 
+		flex-wrap: wrap; 
+		width: 100%;
+		height: auto;
+	}
+	.mix{
+		color: White;
+		background-color: #1C3CE3FF;
+		width: 30px;
+		height: 30px;
+		margin: 5px;
+		text-align: center;
+		font-size: 24px;
+	}
+</style>
+
+<title>Алфавит</title>
+</head>
+<body>
+	<div id="fix"></div>
+	<input type="text" id="myInput" placeholder="Введите тект" class="Inp" >
+<script>
+var input = document.getElementById('myInput');
+
+input.addEventListener('input', function(event) {
+// Обнуляем div:
+var div = document.getElementById('fix');
+div.textContent = '';
+
+// Смотрим значение в input:
+var text = event.target.value;
+
+// Для каждого символа из текстовой строки - добавляем div:
+for (var i=0; i<text.length; i++) {
+var char = document.createElement('div');
+char.classList.add("mix");
+char.innerHTML = text[i]; // i-й элемент строки
+div.appendChild(char);
+}
+
+// Удаление блока и элемента строки
+var letters = div.children; // - на каждый дочерний элемент div вешаю событие.
+for (var j=0; j<letters.length; j++) {
+letters[j].addEventListener('click', function(event){
+var elem = event.target;
+div.removeChild(elem);
+input.value = div.innerText;
+});
+}
+});
+
+
+</script>
+</body>
+</html>
